@@ -7,4 +7,11 @@ describe("Tests para ExplorerService", () => {
         expect(explorersInNode.length).toBe(1);
     });
 
-});
+        test("Requerimiento 2: Test para ExplorersByStack", () => {
+            const explorers = [{"stacks": ["javascript","groovy","elm", "elixir", "reasonML"]}];
+            const ExplorersByStack = ExplorerService.filterByStack(explorers, "javascript");
+            expect(ExplorersByStack.toEqual)
+        });
+
+    });
+
